@@ -1,0 +1,494 @@
+{
+  "current_config": {
+    "config_version": 4,
+    "business": {
+      "name": "Northline Roofing & Exteriors",
+      "region": "Columbus, OH",
+      "currency": "USD"
+    },
+    "questions": [
+      {
+        "key": "roof_area",
+        "label": "Roughly how big is your roof?",
+        "type": "number",
+        "unit": "sq ft",
+        "required": true,
+        "min": 300,
+        "max": 12000,
+        "active": true
+      },
+      {
+        "key": "material",
+        "label": "What material do you want?",
+        "type": "select",
+        "required": true,
+        "active": true,
+        "options": [
+          {
+            "value": "asphalt_3tab",
+            "label": "Asphalt shingle - 3-tab",
+            "rate_per_sqft": 4.25
+          },
+          {
+            "value": "asphalt_arch",
+            "label": "Asphalt shingle - architectural",
+            "rate_per_sqft": 5.9
+          },
+          {
+            "value": "metal_standing",
+            "label": "Standing seam metal",
+            "rate_per_sqft": 12.4
+          },
+          {
+            "value": "cedar_shake",
+            "label": "Cedar shake",
+            "rate_per_sqft": 11.1
+          }
+        ]
+      },
+      {
+        "key": "pitch",
+        "label": "How steep is the roof?",
+        "type": "select",
+        "required": true,
+        "active": true,
+        "options": [
+          {
+            "value": "low",
+            "label": "Low - you could walk on it",
+            "multiplier": 1
+          },
+          {
+            "value": "medium",
+            "label": "Medium",
+            "multiplier": "1.12"
+          },
+          {
+            "value": "steep",
+            "label": "Steep - not walkable",
+            "multiplier": 1.3
+          }
+        ]
+      },
+      {
+        "key": "layers",
+        "label": "How many layers of old roofing are on there now?",
+        "type": "select",
+        "required": true,
+        "active": true,
+        "options": [
+          {
+            "value": "0",
+            "label": "None - new build",
+            "tear_off_per_sqft": 0
+          },
+          {
+            "value": "1",
+            "label": "One layer",
+            "tear_off_per_sqft": 1.15
+          },
+          {
+            "value": "2",
+            "label": "Two or more layers",
+            "tear_off_per_sqft": 2.05
+          }
+        ]
+      },
+      {
+        "key": "stories",
+        "label": "How many stories is the house?",
+        "type": "select",
+        "required": true,
+        "active": true,
+        "options": [
+          {
+            "value": "1",
+            "label": "Single storey",
+            "multiplier": 1
+          },
+          {
+            "value": "2",
+            "label": "Two storeys",
+            "multiplier": 1.08
+          },
+          {
+            "value": "3",
+            "label": "Three or more",
+            "multiplier": 1.18
+          }
+        ]
+      }
+    ],
+    "modifiers": {
+      "waste_factor": 0.1,
+      "permit_flat_fee": 350,
+      "range_spread_pct": 12
+    },
+    "updated_at": "2026-08-17T15:17:54.513Z",
+    "updated_by": "Dale Whitmore",
+    "change_notes": "Config updated by Dale Whitmore"
+  },
+  "config_history": [
+    {
+      "id": 2,
+      "version": 4,
+      "data": {
+        "config_version": 4,
+        "business": {
+          "name": "Northline Roofing & Exteriors",
+          "region": "Columbus, OH",
+          "currency": "USD"
+        },
+        "questions": [
+          {
+            "key": "roof_area",
+            "label": "Roughly how big is your roof?",
+            "type": "number",
+            "unit": "sq ft",
+            "required": true,
+            "min": 300,
+            "max": 12000,
+            "active": true
+          },
+          {
+            "key": "material",
+            "label": "What material do you want?",
+            "type": "select",
+            "required": true,
+            "active": true,
+            "options": [
+              {
+                "value": "asphalt_3tab",
+                "label": "Asphalt shingle - 3-tab",
+                "rate_per_sqft": 4.25
+              },
+              {
+                "value": "asphalt_arch",
+                "label": "Asphalt shingle - architectural",
+                "rate_per_sqft": 5.9
+              },
+              {
+                "value": "metal_standing",
+                "label": "Standing seam metal",
+                "rate_per_sqft": 12.4
+              },
+              {
+                "value": "cedar_shake",
+                "label": "Cedar shake",
+                "rate_per_sqft": 11.1
+              }
+            ]
+          },
+          {
+            "key": "pitch",
+            "label": "How steep is the roof?",
+            "type": "select",
+            "required": true,
+            "active": true,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low - you could walk on it",
+                "multiplier": 1
+              },
+              {
+                "value": "medium",
+                "label": "Medium",
+                "multiplier": "1.12"
+              },
+              {
+                "value": "steep",
+                "label": "Steep - not walkable",
+                "multiplier": 1.3
+              }
+            ]
+          },
+          {
+            "key": "layers",
+            "label": "How many layers of old roofing are on there now?",
+            "type": "select",
+            "required": true,
+            "active": true,
+            "options": [
+              {
+                "value": "0",
+                "label": "None - new build",
+                "tear_off_per_sqft": 0
+              },
+              {
+                "value": "1",
+                "label": "One layer",
+                "tear_off_per_sqft": 1.15
+              },
+              {
+                "value": "2",
+                "label": "Two or more layers",
+                "tear_off_per_sqft": 2.05
+              }
+            ]
+          },
+          {
+            "key": "stories",
+            "label": "How many stories is the house?",
+            "type": "select",
+            "required": true,
+            "active": true,
+            "options": [
+              {
+                "value": "1",
+                "label": "Single storey",
+                "multiplier": 1
+              },
+              {
+                "value": "2",
+                "label": "Two storeys",
+                "multiplier": 1.08
+              },
+              {
+                "value": "3",
+                "label": "Three or more",
+                "multiplier": 1.18
+              }
+            ]
+          }
+        ],
+        "modifiers": {
+          "waste_factor": 0.1,
+          "permit_flat_fee": 350,
+          "range_spread_pct": 12
+        },
+        "updated_at": "2026-08-17T15:17:54.513Z",
+        "updated_by": "Dale Whitmore",
+        "change_notes": "Config updated by Dale Whitmore"
+      },
+      "created_at": "2026-08-17T15:17:54.513Z",
+      "created_by": "Dale Whitmore",
+      "notes": "Config updated by Dale Whitmore"
+    },
+    {
+      "id": 1,
+      "version": 3,
+      "data": {
+        "config_version": 3,
+        "business": {
+          "name": "Northline Roofing & Exteriors",
+          "region": "Columbus, OH",
+          "currency": "USD"
+        },
+        "questions": [
+          {
+            "key": "roof_area",
+            "label": "Roughly how big is your roof?",
+            "type": "number",
+            "unit": "sq ft",
+            "required": true,
+            "min": 300,
+            "max": 12000,
+            "active": true
+          },
+          {
+            "key": "material",
+            "label": "What material do you want?",
+            "type": "select",
+            "required": true,
+            "active": true,
+            "options": [
+              {
+                "value": "asphalt_3tab",
+                "label": "Asphalt shingle - 3-tab",
+                "rate_per_sqft": 4.25
+              },
+              {
+                "value": "asphalt_arch",
+                "label": "Asphalt shingle - architectural",
+                "rate_per_sqft": 5.9
+              },
+              {
+                "value": "metal_standing",
+                "label": "Standing seam metal",
+                "rate_per_sqft": 12.4
+              },
+              {
+                "value": "cedar_shake",
+                "label": "Cedar shake",
+                "rate_per_sqft": 11.1
+              }
+            ]
+          },
+          {
+            "key": "pitch",
+            "label": "How steep is the roof?",
+            "type": "select",
+            "required": true,
+            "active": true,
+            "options": [
+              {
+                "value": "low",
+                "label": "Low - you could walk on it",
+                "multiplier": 1
+              },
+              {
+                "value": "medium",
+                "label": "Medium",
+                "multiplier": "1.12"
+              },
+              {
+                "value": "steep",
+                "label": "Steep - not walkable",
+                "multiplier": 1.3
+              }
+            ]
+          },
+          {
+            "key": "layers",
+            "label": "How many layers of old roofing are on there now?",
+            "type": "select",
+            "required": true,
+            "active": true,
+            "options": [
+              {
+                "value": "0",
+                "label": "None - new build",
+                "tear_off_per_sqft": 0
+              },
+              {
+                "value": "1",
+                "label": "One layer",
+                "tear_off_per_sqft": 1.15
+              },
+              {
+                "value": "2",
+                "label": "Two or more layers",
+                "tear_off_per_sqft": 2.05
+              }
+            ]
+          },
+          {
+            "key": "stories",
+            "label": "How many stories is the house?",
+            "type": "select",
+            "required": true,
+            "active": true,
+            "options": [
+              {
+                "value": "1",
+                "label": "Single storey",
+                "multiplier": 1
+              },
+              {
+                "value": "2",
+                "label": "Two storeys",
+                "multiplier": 1.08
+              },
+              {
+                "value": "3",
+                "label": "Three or more",
+                "multiplier": 1.18
+              }
+            ]
+          }
+        ],
+        "modifiers": {
+          "waste_factor": 0.1,
+          "permit_flat_fee": 350,
+          "range_spread_pct": 12
+        },
+        "updated_at": "2026-06-01T10:00:00Z",
+        "updated_by": "Dale Whitmore",
+        "change_notes": "Initial production system import (v3)"
+      },
+      "created_at": "2026-06-01T10:00:00Z",
+      "created_by": "Dale Whitmore",
+      "notes": "Initial production system import (v3)"
+    }
+  ],
+  "leads": [
+    {
+      "id": "ld_8319",
+      "captured_at": "2026-08-17T15:12:15.692Z",
+      "config_version": 3,
+      "name": "Sai Sankeerth Billakanti",
+      "phone": "7893392769",
+      "email": "saisankeerthbillakanti@gmail.com",
+      "answers": {
+        "roof_area": 1800,
+        "material": "cedar_shake",
+        "pitch": "steep",
+        "layers": "0",
+        "stories": "1"
+      },
+      "estimate_low": 25450,
+      "estimate_high": 32390,
+      "breakdown": {
+        "roof_area": 1800,
+        "waste_factor": 0.1,
+        "effective_area": 1980,
+        "material_rate": 11.1,
+        "base_material_cost": 21978,
+        "tear_off_rate": 0,
+        "tear_off_cost": 0,
+        "pitch_multiplier": 1.3,
+        "stories_multiplier": 1,
+        "subtotal": 28571.4,
+        "permit_flat_fee": 350,
+        "base_total": 28921.4,
+        "range_spread_pct": 12,
+        "estimate_low": 25450,
+        "estimate_high": 32390,
+        "currency": "USD"
+      }
+    }
+  ],
+  "webhooks": [],
+  "sessions": [
+    {
+      "token": "sess_618eea83216c35d0621159cdd048a57b34f6d2d3573c6e2a",
+      "username": "dale",
+      "name": "Dale Whitmore",
+      "role": "Owner",
+      "expires_at": 1787585804729
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_dale",
+      "username": "dale",
+      "name": "Dale Whitmore",
+      "email": "dale@northlineroofing.com",
+      "password": "northline_salt_1:eb98f5d8ab5987217d67e130a047fece02bbb192d4a73faadc5104eb4c1bd581710e1ba8dde29ae2dde2e94676cae0984d451ff1e4a870b9a19d14f82e80bb53",
+      "role": "Owner",
+      "company_name": "Northline Roofing & Exteriors",
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "usr_marcus",
+      "username": "marcus",
+      "name": "Marcus Vance",
+      "email": "marcus@northlineroofing.com",
+      "password": "northline_salt_2:0d3074bfe8113004536440dc42eeee56fb79b2b3b23c40f976e8af7ec7897569cc3e3851b01b31cd53f5dd8387beebe39fc9be7430141c8dc4d4d64a32ea3579",
+      "role": "Financial Manager",
+      "company_name": "Northline Roofing & Exteriors",
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "usr_admin",
+      "username": "admin",
+      "name": "System Admin",
+      "email": "admin@northlineroofing.com",
+      "password": "northline_salt_3:2c55f5d4018760ab030ee848472e7e8a930a438f4adc2de2755143e42c30041217f8a009942d323b0667361aa3b6e7d84236bf236d92b9e1176e10530836ccee",
+      "role": "Admin",
+      "company_name": "Northline Roofing & Exteriors",
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "usr_af7b5ceec055",
+      "username": "sarah_1926",
+      "name": "Sarah Connor",
+      "email": "sarah_5121@skynetroofing.com",
+      "password": "d9b4f19b6ec3d5dddca74e81bd02eb8c:c37b02665215eadc663ce30c3bd10708cc3c0a0d01ce19fa2f5aeb9b810c38b1d0be5a4339ac8258e16add6fb529c9fe76eef1a65c028058aa0ae4b81322a106",
+      "role": "Owner",
+      "company_name": "Connor Roofing & Restoration",
+      "created_at": "2026-08-17T15:46:49.307Z"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "configs": [
+    {
+      "config_version": 3,
+      "business": {
+        "name": "Northline Roofing & Exteriors",
+        "region": "Columbus, OH",
+        "currency": "USD"
+      },
+      "questions": [
+        {
+          "key": "roof_area",
+          "label": "Roughly how big is your roof?",
+          "type": "number",
+          "unit": "sq ft",
+          "required": true,
+          "min": 300,
+          "max": 12000,
+          "active": true
+        },
+        {
+          "key": "material",
+          "label": "What material do you want?",
+          "type": "select",
+          "required": true,
+          "active": true,
+          "options": [
+            {
+              "value": "asphalt_3tab",
+              "label": "Asphalt shingle - 3-tab",
+              "rate_per_sqft": 4.25
+            },
+            {
+              "value": "asphalt_arch",
+              "label": "Asphalt shingle - architectural",
+              "rate_per_sqft": 5.9
+            },
+            {
+              "value": "metal_standing",
+              "label": "Standing seam metal",
+              "rate_per_sqft": 12.4
+            },
+            {
+              "value": "cedar_shake",
+              "label": "Cedar shake",
+              "rate_per_sqft": 11.1
+            }
+          ]
+        },
+        {
+          "key": "pitch",
+          "label": "How steep is the roof?",
+          "type": "select",
+          "required": true,
+          "active": true,
+          "options": [
+            {
+              "value": "low",
+              "label": "Low - you could walk on it",
+              "multiplier": 1
+            },
+            {
+              "value": "medium",
+              "label": "Medium",
+              "multiplier": 1.12
+            },
+            {
+              "value": "steep",
+              "label": "Steep - not walkable",
+              "multiplier": 1.3
+            }
+          ]
+        },
+        {
+          "key": "layers",
+          "label": "How many layers of old roofing are on there now?",
+          "type": "select",
+          "required": true,
+          "active": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "None - new build",
+              "tear_off_per_sqft": 0
+            },
+            {
+              "value": "1",
+              "label": "One layer",
+              "tear_off_per_sqft": 1.15
+            },
+            {
+              "value": "2",
+              "label": "Two or more layers",
+              "tear_off_per_sqft": 2.05
+            }
+          ]
+        },
+        {
+          "key": "stories",
+          "label": "How many stories is the house?",
+          "type": "select",
+          "required": true,
+          "active": true,
+          "options": [
+            {
+              "value": "1",
+              "label": "Single storey",
+              "multiplier": 1
+            },
+            {
+              "value": "2",
+              "label": "Two storeys",
+              "multiplier": 1.08
+            },
+            {
+              "value": "3",
+              "label": "Three or more",
+              "multiplier": 1.18
+            }
+          ]
+        }
+      ],
+      "modifiers": {
+        "waste_factor": 0.1,
+        "permit_flat_fee": 350,
+        "range_spread_pct": 12
+      },
+      "updated_at": "2026-06-01T10:00:00Z",
+      "updated_by": "Dale Whitmore",
+      "change_notes": "Initial production config"
+    }
+  ],
+  "leads": [
+    {
+      "id": "ld_1041",
+      "captured_at": "2026-06-02T14:20:11Z",
+      "config_version": 3,
+      "name": "Ana Ruiz",
+      "phone": "+1-614-555-0148",
+      "email": "aruiz@example.com",
+      "answers": {
+        "roof_area": 2100,
+        "material": "asphalt_arch",
+        "pitch": "medium",
+        "layers": "1",
+        "stories": "2"
+      },
+      "estimate_low": 21480,
+      "estimate_high": 27260
+    },
+    {
+      "id": "ld_1102",
+      "captured_at": "2026-07-11T18:47:03Z",
+      "config_version": 3,
+      "name": "Priya Nair",
+      "phone": "+1-614-555-0177",
+      "email": "pnair@example.com",
+      "answers": {
+        "roof_area": 900,
+        "material": "metal_standing",
+        "pitch": "low",
+        "layers": "0",
+        "stories": "1"
+      },
+      "estimate_low": 12240,
+      "estimate_high": 15530
+    }
+  ],
+  "webhooks": [],
+  "sessions": [],
+  "users": [
+    {
+      "id": "usr_dale",
+      "username": "dale",
+      "name": "Dale Whitmore",
+      "email": "dale@northlineroofing.com",
+      "password": "northline_salt_1:eb98f5d8ab5987217d67e130a047fece02bbb192d4a73faadc5104eb4c1bd581710e1ba8dde29ae2dde2e94676cae0984d451ff1e4a870b9a19d14f82e80bb53",
+      "role": "Owner",
+      "company_name": "Northline Roofing & Exteriors",
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "usr_marcus",
+      "username": "marcus",
+      "name": "Marcus Vance",
+      "email": "marcus@northlineroofing.com",
+      "password": "northline_salt_2:0d3074bfe8113004536440dc42eeee56fb79b2b3b23c40f976e8af7ec7897569cc3e3851b01b31cd53f5dd8387beebe39fc9be7430141c8dc4d4d64a32ea3579",
+      "role": "Financial Manager",
+      "company_name": "Northline Roofing & Exteriors",
+      "created_at": "2026-01-01T00:00:00Z"
+    },
+    {
+      "id": "usr_579e9c5c73d5",
+      "username": "sarah_56",
+      "name": "Sarah Connor",
+      "email": "sarah_8082@skynetroofing.com",
+      "password": "2727e9756c88818cf9ac80fc27ade35c:e76f272d3186d625f4bd3c3e3ffbd13caf5d6c9aaab6d62173e70d4ac8acd9423702c65b0a81bbbf96bb4a497caf62148f3966f8edaa32b9050ea44ca983c07d",
+      "role": "Owner",
+      "company_name": "Connor Roofing & Restoration",
+      "created_at": "2026-08-17T16:20:58.953Z"
+    },
+    {
+      "id": "usr_7d1d932d6072",
+      "username": "sankeerth",
+      "name": "Sai Sankeerth Billakanti",
+      "email": "sankeerthsunny999@gmail.com",
+      "password": "9fce2e5fb41691957f32f552c2892971:d713dc454247cf44952b556094ad8f95f896db0ab9228fd601cc1190e7be459fc81e41518ed288010130bd62fd60e0306b6bf8ea12c96bf629da35dffb1812a9",
+      "role": "Owner",
+      "company_name": "Northline Roofing & Exteriors",
+      "created_at": "2026-08-17T16:25:46.909Z"
+    },
+    {
+      "id": "usr_1d7100129492",
+      "username": "sarah_8196",
+      "name": "Sarah Connor",
+      "email": "sarah_7063@skynetroofing.com",
+      "password": "e94fe81c2d17e0538a3af4175fc628eb:960aa70ce488d79b48d0f98222ae54006d7cc4eb46b0892e1ef2fc3c8cfa0c0f7cc82266fac69d24f3941b5cb9b324f26ab939bf5846a9a5c0db4466bbdf0479",
+      "role": "Owner",
+      "company_name": "Connor Roofing & Restoration",
+      "created_at": "2026-08-17T16:28:01.219Z"
+    }
+  ]
+}
