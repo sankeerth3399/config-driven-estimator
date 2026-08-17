@@ -1,0 +1,6 @@
+{
+  "name": "Config-Driven Estimator & Owner Panel",
+  "description": "Dynamic configuration-driven roofing cost estimator for homeowners with a protected management panel for rates, questions, modifiers, and captured leads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
