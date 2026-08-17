@@ -69,11 +69,8 @@ Visit **`http://localhost:3000`** in your browser.
 
 ---
 
-## 🛠️ Environment Variables
-Defined in `.env.example`:
-- `GEMINI_API_KEY`: Server-side API key configuration
-- `APP_URL`: Hosted application URL
-
+Live URL:
+https://config-driven-estimator-ownerpanel.ai.studio
 ---
 
 ## 🧪 Running Tests
